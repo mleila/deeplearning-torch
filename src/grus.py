@@ -46,7 +46,6 @@ class GRU_Cell(nn.Module):
         '''
         x_t: (input_size, batch_size)
         '''
-        h_prev = h_prev[:,:]
         update_gate = sigmoid(self.W_u(x_t) + self.K_u(h_prev))
         reset_gate = sigmoid(self.W_r(x_t) + self.K_r(h_prev))
         h_candidate = tanh(self.W_h(x_t) + reset_gate * self.K_h(h_prev))
