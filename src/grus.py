@@ -1,3 +1,9 @@
+'''
+This module contains an implementation of a GRU cell in pytorch, as well as
+some utility functions. See the GRUs_DEMO Notebook for a demonstration. The intent of
+this implementation is to solidify my understanding of the inner working of GRUs. For
+more serious applications, use the pytorch native implemnetation.
+'''
 import torch
 from torch import nn, tanh, sigmoid
 
